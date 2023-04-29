@@ -55,12 +55,6 @@ brew install autojump
 ---
 
 ### Install [tmux](https://github.com/tmux/tmux)
-```bash
-sudo pacman -S tmux
-```
-```bash
-brew install tmux
-```
 
 Link the config file:
 ```bash
@@ -70,12 +64,6 @@ ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ---
 
 ### Install [Neovim](https://github.com/neovim/neovim)
-```bash
-sudo pacman -S neovim
-```
-```bash
-brew install neovim
-```
 
 ##### Prerequisites
 - [`packer.nvim`](https://github.com/wbthomason/packer.nvim)
