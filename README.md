@@ -29,7 +29,7 @@ mkdir -p ~/.cache/zsh && touch ~/.cache/zsh/history
 ```
 ##### Used zsh plugins
 - [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
-- [autojump](https://github.com/wting/autojump)
+- [autojump](https://github.com/wting/autojump) (installation required)
 - [colorize](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colorize)
 - [zsh-interactive-cd](https://github.com/changyuheng/zsh-interactive-cd)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
@@ -49,11 +49,19 @@ ln -s /usr/share/zsh/plugins/zsh-syntax-highlighting $ZSH/custom/plugins
 
 <b>Brew</b>
 ```bash
+brew install autojump
 ```
 
 ---
 
 ### Install [tmux](https://github.com/tmux/tmux)
+```bash
+sudo pacman -S tmux
+```
+```bash
+brew install tmux
+```
+
 Link the config file:
 ```bash
 ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
@@ -62,6 +70,13 @@ ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ---
 
 ### Install [Neovim](https://github.com/neovim/neovim)
+```bash
+sudo pacman -S neovim
+```
+```bash
+brew install neovim
+```
+
 ##### Prerequisites
 - [`packer.nvim`](https://github.com/wbthomason/packer.nvim)
 
