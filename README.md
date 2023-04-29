@@ -6,6 +6,7 @@
 ### Prerequisites
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fd](https://github.com/sharkdp/fd)
+- [exa](https://github.com/ogham/exa) (modern replacement for ls)
 
 ## Installation 
 ```bash
@@ -24,7 +25,7 @@ ln -sf ~/.dotfiles/zsh/zsh_aliases ~/.zsh_aliases
 
 Create the zsh history file:
 ```
-touch ~/.cache/zsh/history
+mkdir -p ~/.cache/zsh && touch ~/.cache/zsh/history
 ```
 ##### Used zsh plugins
 - [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
@@ -39,8 +40,11 @@ touch ~/.cache/zsh/history
 <b>Pacman</b>
 ```bash
 sudo pacman -S oh-my-zsh zsh-autosuggestions zsh-syntax-highlighting
-ln -s /usr/share/zsh/plugins/zsh-autosuggestions /usr/share/oh-my-zsh/custom/plugins
-ln -s /usr/share/zsh/plugins/zsh-syntax-highlighting /usr/share/oh-my-zsh/custom/plugins
+```
+Link the plugins:
+```
+ln -s /usr/share/zsh/plugins/zsh-autosuggestions $ZSH/custom/plugins
+ln -s /usr/share/zsh/plugins/zsh-syntax-highlighting $ZSH/custom/plugins
 ```
 
 <b>Brew</b>
@@ -109,7 +113,6 @@ ln -sf ~/.dotfiles/vim/vimrc ~/.ideavimrc
 ---
 
 ## Tools
-- [exa](https://github.com/ogham/exa) (modern replacement for ls)
 - [fzf](https://github.com/junegunn/fzf) (fzf is a general-purpose command-line fuzzy finder.)
 - [httpie](https://httpie.io/)
 
