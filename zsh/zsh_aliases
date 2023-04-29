@@ -1,0 +1,61 @@
+# default 
+alias v="nvim"
+alias ls="exa"
+alias grep="grep --color"
+alias diff="diff --color"
+alias cp="cp -i" # Confirm before overwriting something
+alias http="http --style=fruity"
+alias df='df -h' # Human-readable sizes
+alias free='free -m' # Show sizes in MB
+alias sz='source ~/.zshrc'
+alias ll='exa -la'
+alias removeSpace="for f in *; do mv "$f" `echo $f | tr ' ' '_'`; done"
+alias open='xdg-open'
+alias streamDir='python3 -m http.server' # stream the current dir to the local network
+
+# tmux
+alias startB="tmux new -s builds"
+
+# VBox
+alias startVM="VBoxManage startvm ubuntu"
+
+# git
+alias gl="git log --oneline --all --graph"
+alias gac='git add . && git commit'
+alias gacp='git add . && git commit && git push'
+
+# docker
+alias dli="docker images -a" # dli = docker list images
+alias dlc="docker container ls -a"
+alias dlv="docker volume ls"
+alias dln="docker network ls"
+alias dp="docker ps"
+alias dpa="docker ps -a"
+alias dcl="docker compose logs -f"
+
+# C++
+alias m="make -j17"
+alias c="make clean"
+alias cm="make clean && make -j17"
+# alias cmg="make clean && make -j17 && /path/to/exe"
+# alias go="/path/to/exe"
+# QT
+# alias q="echo -e 'qmake project.pro' && qmake /path/to/project.pro"
+# alias te="make -C /path/to/project/tests clean && make -j6 -C /path/to/project/tests && /path/to/project/tests/bin/tests"
+
+# python
+alias py="python3"
+alias ca="conda activate"
+alias pyMath="conda activate math"
+
+# java compile and run
+alias jcr="javac *.java && java"
+
+# custom
+alias burp="java --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -jar ~/apps/BurpSuite/burpsuite_community_v2022.11.3.jar"
+alias secres="cat ~/fh/Semester8/Projekt/code/CyberDemon/build/test-results/AttackResults.json | jq"
+
+# alias dbd="docker build -t onlypants_mongodb:latest /path/to/database"
+# alias dcdb="docker exec -it onlypants_mongodb mongo"
+# alias dcu="docker compose --env-file mongodb.env up -d"
+

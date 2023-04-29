@@ -1,0 +1,121 @@
+set guicursor=
+set noshowmatch " no show matching 
+set relativenumber
+set nohlsearch " no highlight search
+set hidden
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/vim/undodir
+set undofile
+set incsearch
+set termguicolors
+set scrolloff=10
+set noshowmode
+set ignorecase " case insensitive 
+
+" Nice menu when typing `:find *.py`
+set wildmode=longest,list,full
+set wildmenu
+
+" Ignore files
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=**/coverage/*
+set wildignore+=**/node_modules/*
+set wildignore+=**/android/*
+set wildignore+=**/ios/*
+set wildignore+=**/.git/*
+
+" use OS clipboard (linux)
+set clipboard=unnamedplus
+
+" Give more space for displaying messages.
+set cmdheight=1
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=50
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" disable ex mode
+map Q <Nop>
+
+" enable mouse scrolling (with tmux)
+set mouse=a
+
+" set encoding
+set encoding=UTF-8
+
+" set a map leader for more key combos
+let mapleader = ','
+        
+" shortcut to save
+nmap <leader>, :w<cr>
+:command W w
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Split window
+nmap ss :split<Return><C-j>
+nmap sv :vsplit<Return><C-l>
+
+" Switch tab
+nmap <S-Tab> :tabprev<Return>
+" nmap <Tab> :tabnext<Return>
+nnoremap <C-t> :tabnew<CR>
+
+" move a marked codeblock up or down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" resize with arrow-keys
+nnoremap <Right> :vertical resize +5<CR>
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Up> :3winc +<CR>
+nnoremap <Down> :3winc -<CR>
+
+map <C-w> :wincmd q<cr>
+
+" Map \r to the Reformat Code action
+" map \r <Action>(ReformatCode)
+
+" Map <leader>d to start debug
+" map <leader>d <Action>(Debug)
+
+" Map \b to toggle the breakpoint on the current line
+" map \b <Action>(ToggleLineBreakpoint)
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+" set scrolloff=5
+
+" Do incremental searching.
+" set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+" map Q gq
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)

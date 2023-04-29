@@ -1,0 +1,55 @@
+echo $USER@$HOST  $(uname -srm) $(lsb_release -rcs)
+
+DISABLE_MAGIC_FUNCTIONS=true
+
+# Path to your oh-my-zsh installation.
+export ZSH=/usr/share/oh-my-zsh
+export DOTFILES=$HOME/.dotfiles
+
+ZSH_THEME="robbyrussell"
+
+plugins=(
+    git 
+    autojump
+    colorize
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-interactive-cd
+    web-search
+)
+
+source $ZSH/oh-my-zsh.sh
+
+EDITOR='nvim'
+
+# History in cache directory:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.cache/zsh/history
+
+# Tmux
+TERM="tmux-256color"
+
+# QT
+#export QT_QPA_PLATFORMTHEME="qt5ct"
+
+autoload -U colors && colors
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+
+bindkey '^o' autosuggest-accept
+ 
+# alias definitions
+source ~/.zsh_aliases
+
+# to path
+export PATH=/home/joker/.local/share/gem/ruby/3.0.0/bin:/home/joker/tools:$PATH
