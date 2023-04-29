@@ -55,6 +55,8 @@ brew install autojump
 ---
 
 ### Install [tmux](https://github.com/tmux/tmux)
+##### Prerequisites
+- [xclip](https://github.com/astrand/xclip) (Command line interface to the X11 clipboard)
 
 Link the config file:
 ```bash
